@@ -5,6 +5,76 @@
 
 ---
 
+## 🚀 Quick Start: Environment Setup
+
+### Prerequisites
+- **Python 3.9+** installed on your system
+
+### Step 1: Create & Activate Virtual Environment
+
+**On Windows:**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**On macOS/Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Once activated, your terminal prompt will show `(venv)`.
+
+### Step 2: Install Dependencies
+
+All dependencies are pinned to exact versions in `requirements.txt` for full reproducibility:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 3: Verify Installation
+
+```bash
+pip list
+```
+
+You should see: pandas, numpy, scikit-learn, matplotlib, seaborn, joblib, scipy, etc.
+
+### Step 4: Run the Pipeline
+
+```bash
+python main.py
+```
+
+### Step 5: Deactivate Environment (When Done)
+
+```bash
+deactivate
+```
+
+### Dependencies Summary
+
+| Package | Version | Purpose |
+|---|---|---|
+| **pandas** | 3.0.2 | Data manipulation & analysis |
+| **numpy** | 2.4.4 | Numerical computing |
+| **scikit-learn** | 1.8.0 | ML algorithms & evaluation |
+| **matplotlib** | 3.10.8 | Static visualization |
+| **seaborn** | 0.13.2 | Statistical visualization |
+| **joblib** | 1.5.3 | Model persistence & parallel processing |
+| **scipy** | 1.17.1 | Scientific computing |
+
+### 💡 Best Practice Reminders
+
+- **Always activate the virtual environment before running code**
+- **Do not commit the `venv/` folder to Git** — it's automatically excluded via `.gitignore`
+- **Pin versions in `requirements.txt`** to ensure reproducible results across environments
+- If adding new packages: `pip install <package>` then `pip freeze > requirements.txt`
+
+---
+
 ##  1. Problem Statement & Solution Overview
 
 ### The Real-World Problem
