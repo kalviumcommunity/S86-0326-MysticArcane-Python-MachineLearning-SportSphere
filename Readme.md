@@ -5,7 +5,7 @@
 
 ---
 
-## 🎯 1. Problem Statement & Solution Overview
+##  1. Problem Statement & Solution Overview
 
 ### The Real-World Problem
 
@@ -14,8 +14,8 @@ Sports organizations today face a critical bottleneck: **match statistics are ab
 **Affected Stakeholders:**
 - **Coaches**: Need fast pattern identification to inform training strategies
 - **Management**: Require data-driven recruiting and performance justification to leadership
-- **Sponsors**: Demand clear ROI and performance trends to justify sponsorship spend
-- **Analysts**: Currently spend excessive time manually collecting, cleaning, and presenting data
+- **Sponsors**: demand Clear ROI and performance trends to justify sponsorship spend
+- **Analysts**: currently spend excessive time manually collecting, cleaning, and presenting data
 
 **Cost of the Problem:**
 - Delayed decision-making leads to missed competitive advantages
@@ -137,7 +137,7 @@ Staying focused on MVP scope prevents scope creep and ensures honest, reproducib
 - Data dictionaries: define all 40+ engineered features
 - Output: New team member can run project without questions
 
-### ❌ Out of Scope (Deferred to Future Phases)
+###  Out of Scope (Deferred to Future Phases)
 
 - Real-time prediction API or web application
 - Automated model retraining pipeline or MLOps infrastructure
