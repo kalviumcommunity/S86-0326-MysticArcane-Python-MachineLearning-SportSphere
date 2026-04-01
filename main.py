@@ -3,7 +3,7 @@ import json
 import logging
 from src.config import (
     RAW_DATA_PATH, TARGET_COLUMN, TEST_SIZE, RANDOM_STATE, 
-    CATEGORICAL_COLS, NUMERICAL_COLS, MODEL_PATH, PIPELINE_PATH
+    CATEGORICAL_COLS, NUMERICAL_COLS, MODEL_PATH, PIPELINE_PATH, LOGS_DIR
 )
 from src.data_preprocessing import load_data, clean_data, split_data
 from src.feature_engineering import build_preprocessing_pipeline
@@ -12,9 +12,9 @@ from src.evaluate import evaluate_model
 from src.persistence import save_artifact
 
 # Configure logging
-os.makedirs('logs', exist_ok=True)
+os.makedirs(LOGS_DIR, exist_ok=True)
 logging.basicConfig(
-    filename='logs/training.log',
+    filename=os.path.join(LOGS_DIR, 'training.log'),
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )

@@ -83,6 +83,38 @@ Run this once before final submission to verify dependency management is correct
 4. Run `python main.py`.
 5. Confirm the pipeline completes without import/version errors.
 
+## Project Structure
+
+```text
+Python-ML(SW)/
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── external/
+├── notebooks/
+├── src/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── data_preprocessing.py
+│   ├── feature_engineering.py
+│   ├── train.py
+│   ├── evaluate.py
+│   ├── predict.py
+│   └── persistence.py
+├── models/
+├── reports/
+├── logs/
+├── requirements.txt
+├── Readme.md
+└── main.py
+```
+
+### Pipeline Responsibility Split
+
+- **Training flow**: `data/raw` -> preprocessing -> feature engineering -> model fit -> `models/` artifacts -> evaluation output in `reports/`.
+- **Prediction flow**: new input -> load saved preprocessing + model artifacts from `models/` -> transform -> predict.
+- **Rule**: raw data in `data/raw/` is immutable source-of-truth and should not be modified by scripts.
+
 ---
 
 ##  1. Problem Statement & Solution Overview
