@@ -8,7 +8,7 @@
 ## 🚀 Quick Start: Environment Setup
 
 ### Prerequisites
-- **Python 3.9+** installed on your system
+- **Python 3.10** installed on your system
 
 ### Step 1: Create & Activate Virtual Environment
 
@@ -58,13 +58,13 @@ deactivate
 
 | Package | Version | Purpose |
 |---|---|---|
-| **pandas** | 3.0.2 | Data manipulation & analysis |
-| **numpy** | 2.4.4 | Numerical computing |
-| **scikit-learn** | 1.8.0 | ML algorithms & evaluation |
-| **matplotlib** | 3.10.8 | Static visualization |
+| **pandas** | 2.2.3 | Data manipulation & analysis |
+| **numpy** | 1.26.4 | Numerical computing |
+| **scikit-learn** | 1.5.2 | ML algorithms & evaluation |
+| **matplotlib** | 3.9.2 | Static visualization |
 | **seaborn** | 0.13.2 | Statistical visualization |
-| **joblib** | 1.5.3 | Model persistence & parallel processing |
-| **scipy** | 1.17.1 | Scientific computing |
+| **joblib** | 1.4.2 | Model persistence & parallel processing |
+| **scipy** | 1.13.1 | Scientific computing |
 
 ### 💡 Best Practice Reminders
 
@@ -72,6 +72,16 @@ deactivate
 - **Do not commit the `venv/` folder to Git** — it's automatically excluded via `.gitignore`
 - **Pin versions in `requirements.txt`** to ensure reproducible results across environments
 - If adding new packages: `pip install <package>` then `pip freeze > requirements.txt`
+
+### Reproducibility Check (Before Submission)
+
+Run this once before final submission to verify dependency management is correct:
+
+1. Delete existing virtual environment (`venv/`).
+2. Recreate and activate it.
+3. Run `pip install -r requirements.txt`.
+4. Run `python main.py`.
+5. Confirm the pipeline completes without import/version errors.
 
 ---
 
