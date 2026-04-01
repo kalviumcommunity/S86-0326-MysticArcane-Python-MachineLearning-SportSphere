@@ -12,7 +12,15 @@ def load_data(filepath: str) -> pd.DataFrame:
     Returns:
         pd.DataFrame: The loaded dataset.
     """
-    return pd.read_csv(filepath)
+    try:
+        df = pd.read_csv(filepath)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"File not found at path: {filepath}")
+
+    if df.empty:
+        raise ValueError("Loaded dataset is empty.")
+        
+    return df
 
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     """
